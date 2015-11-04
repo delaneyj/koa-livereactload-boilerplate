@@ -1,0 +1,49 @@
+{
+  "name": "koa-livereactload-boilerplate",
+  "version": "0.0.1",
+  "description": "Couldn't find a decent boilerplate so extended a livereactload example to use koa",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run watch:frontend",
+    "env:production": "set NODE_ENV=production",
+    "env:development": "set NODE_ENV=development",
+    "build:prod": "browserify src/frontend/clientEntryPoint.js -t babelify -g envify -g uglifyify > dist/bundle.js",
+    "bundle:prod": "npm run env:production && npm run build:prod",
+    "server": "node --harmony_destructuring src/backend/server.js",
+    "watch": "npm run env:development & npm run watch:server & npm run watch:frontend & wait",
+    "watch:server": "nodemon --ignore bundle.js --debug --harmony_destructuring src/backend/server.js",
+    "watch:frontend": "node_modules/.bin/watchify src/frontend/clientEntryPoint.js -v -t babelify -g envify -p livereactload -o dist/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delaneyj/koa-livereactload-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "Delaney Gillilan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/delaneyj/koa-livereactload-boilerplate/issues"
+  },
+  "homepage": "https://github.com/delaneyj/koa-livereactload-boilerplate#readme",
+  "devDependencies": {
+    "babel-plugin-react-transform": "^1.1.1",
+    "babelify": "^7.2.0",
+    "envify": "^3.4.0",
+    "livereactload": "^2.1.0",
+    "nodemon": "^1.8.1",
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2",
+    "react-proxy": "^2.0.0",
+    "react-tap-event-plugin": "^0.2.1",
+    "uglifyify": "^3.0.1",
+    "watchify": "^3.6.0"
+  },
+  "dependencies": {
+    "babelify": "^6.4.0",
+    "co": "^4.6.0",
+    "koa": "^1.1.1",
+    "koa-router": "^5.2.3",
+    "koa-static": "^1.5.2",
+    "yargs": "^3.29.0"
+  }
+}
