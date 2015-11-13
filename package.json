@@ -41,8 +41,11 @@
   "dependencies": {
     "babelify": "^6.4.0",
     "co": "^4.6.0",
+    "ioredis": "^1.10.0",
     "koa": "^1.1.1",
+    "koa-bodyparser": "^2.0.1",
     "koa-router": "^5.2.3",
-    "koa-static": "^1.5.2"
+    "koa-static": "^1.5.2",
+    "node-uuid": "^1.4.7"
   }
 }
