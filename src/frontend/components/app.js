@@ -4,6 +4,8 @@ const Counter = require("./counter")
 const {reddish} = require("./styles")
 const {Component} = React
 
+const {Card, CardText} = require('material-ui');
+
 export default class App extends Component {
     render() {
         const {counter1, counter2} = this.props   // see site.js and server.js
@@ -12,7 +14,7 @@ export default class App extends Component {
                 <Header />
                 <Card zDepth={4}>
                     <CardText>
-                        asdf
+                        Hey Jorge!
                     </CardText>
                     <Counter
                         initialValue={counter1}

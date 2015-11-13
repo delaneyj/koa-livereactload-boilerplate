@@ -27,13 +27,13 @@
   "homepage": "https://github.com/delaneyj/koa-livereactload-boilerplate#readme",
   "devDependencies": {
     "babel-plugin-react-transform": "^1.1.1",
-    "babelify": "^7.2.0",
     "envify": "^3.4.0",
     "livereactload": "^2.1.0",
+    "material-ui": "^0.13.2",
     "nodemon": "^1.8.1",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
-    "react-proxy": "^2.0.0",
+    "react-proxy": "^1.1.1",
     "react-tap-event-plugin": "^0.2.1",
     "uglifyify": "^3.0.1",
     "watchify": "^3.6.0"
@@ -43,7 +43,6 @@
     "co": "^4.6.0",
     "koa": "^1.1.1",
     "koa-router": "^5.2.3",
-    "koa-static": "^1.5.2",
-    "yargs": "^3.29.0"
+    "koa-static": "^1.5.2"
   }
 }
